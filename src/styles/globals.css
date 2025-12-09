@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  /* New color palette */
+  --paper-white: #FEFDFB;
+  --ivory: #F5F1E8;
+  --parchment: #E8E4D9;
+  --pale-sage: #D4D8C8;
+  --warm-taupe: #C9B8AA;
+  --misty-blue: #A8BFBF;
+  --dusty-green: #9DB0A8;
+  --soft-black: #4A4A4A;
+  
+  /* Updated theme using new palette */
+  --background: #FEFDFB;
+  --foreground: #4A4A4A;
+  --card: #F5F1E8;
+  --card-foreground: #4A4A4A;
+  --popover: #F5F1E8;
+  --popover-foreground: #4A4A4A;
+  --primary: #4A4A4A;
+  --primary-foreground: #FEFDFB;
+  --secondary: #E8E4D9;
+  --secondary-foreground: #4A4A4A;
+  --muted: #D4D8C8;
+  --muted-foreground: #4A4A4A;
+  --accent: #C9B8AA;
+  --accent-foreground: #4A4A4A;
+  --destructive: #8b3a3a;
+  --destructive-foreground: #FEFDFB;
+  --border: rgba(74, 74, 74, 0.15);
+  --input: transparent;
+  --input-background: #F5F1E8;
+  --switch-background: #D4D8C8;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #9DB0A8;
+  --chart-1: #9DB0A8;
+  --chart-2: #A8BFBF;
+  --chart-3: #C9B8AA;
+  --chart-4: #D4D8C8;
+  --chart-5: #E8E4D9;
+  --radius: 0.125rem;
+  --sidebar: #F5F1E8;
+  --sidebar-foreground: #4A4A4A;
+  --sidebar-primary: #4A4A4A;
+  --sidebar-primary-foreground: #FEFDFB;
+  --sidebar-accent: #E8E4D9;
+  --sidebar-accent-foreground: #4A4A4A;
+  --sidebar-border: rgba(74, 74, 74, 0.15);
+  --sidebar-ring: #9DB0A8;
+}
+
+.dark {
+  --background: #4A4A4A;
+  --foreground: #FEFDFB;
+  --card: #5A5A5A;
+  --card-foreground: #FEFDFB;
+  --popover: #5A5A5A;
+  --popover-foreground: #FEFDFB;
+  --primary: #FEFDFB;
+  --primary-foreground: #4A4A4A;
+  --secondary: #6A6A6A;
+  --secondary-foreground: #FEFDFB;
+  --muted: #6A6A6A;
+  --muted-foreground: #D4D8C8;
+  --accent: #7A7A7A;
+  --accent-foreground: #FEFDFB;
+  --destructive: #d4756f;
+  --destructive-foreground: #4A4A4A;
+  --border: rgba(254, 253, 251, 0.15);
+  --input: rgba(254, 253, 251, 0.1);
+  --ring: #A8BFBF;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: #A8BFBF;
+  --chart-2: #9DB0A8;
+  --chart-3: #C9B8AA;
+  --chart-4: #D4D8C8;
+  --chart-5: #E8E4D9;
+  --sidebar: #5A5A5A;
+  --sidebar-foreground: #FEFDFB;
+  --sidebar-primary: #D4D8C8;
+  --sidebar-primary-foreground: #4A4A4A;
+  --sidebar-accent: #6A6A6A;
+  --sidebar-accent-foreground: #FEFDFB;
+  --sidebar-border: rgba(254, 253, 251, 0.15);
+  --sidebar-ring: #A8BFBF;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Ink Calligraphy Decorative Elements */
+.ink-flourish {
+  position: relative;
+}
+
+.ink-flourish::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, currentColor, transparent);
+  opacity: 0.3;
+}
+
+.ink-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.ink-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.4;
+}
+
+/* Subtle paper texture */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  z-index: 9999;
+}
