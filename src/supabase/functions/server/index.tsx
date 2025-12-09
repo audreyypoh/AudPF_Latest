@@ -22,12 +22,12 @@ app.use(
 );
 
 // Health check endpoint
-app.get("/make-server-d18c3754/health", (c) => {
+app.get("/health", (c) => {
   return c.json({ status: "ok" });
 });
 
 // Contact form submission endpoint
-app.post("/make-server-d18c3754/contact", async (c) => {
+app.post("/contact", async (c) => {
   try {
     const data = await c.req.json();
     

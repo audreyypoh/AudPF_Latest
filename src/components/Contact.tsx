@@ -4,7 +4,7 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Mail, MapPin } from "lucide-react";
 import { useState } from "react";
-import { projectId, publicAnonKey } from "../utils/supabase/info";
+import { supabaseUrl, publicAnonKey } from "../utils/supabase/info";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -21,7 +21,7 @@ export function Contact() {
 
     try {
       const response = await fetch(
-        `https://${projectId}.supabase.co/functions/v1/make-server-d18c3754/contact`,
+        `${supabaseUrl}/functions/v1/make-server-d18c3754/contact`,
         {
           method: "POST",
           headers: {
